@@ -1016,24 +1016,35 @@ button:hover {
 }
 
 /* Responsive Styles */
-@media (min-width: 768px) {
-  .section-content {
-    flex-direction: row;
-    justify-content: center;
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 20px 10px;
+  }
+
+  .contact-title {
+    font-size: 1.5rem;
   }
 
   .contact-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 900px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
 
-  .contact-info {
-    align-items: flex-start;
+  .contact-form-container form {
+    padding: 15px;
   }
 
-  .contact-form {
-    max-width: 400px;
+  .contact-inputbox {
+    width: 100%;
+  }
+
+  .contact-field {
+    font-size: 14px;
+  }
+
+  .contact-button {
+    font-size: 14px;
+    padding: 8px;
   }
 }
