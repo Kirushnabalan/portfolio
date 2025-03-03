@@ -2,7 +2,7 @@
 
 import { Github, Linkedin, Mail } from "lucide-react";
 import { useState, useEffect } from "react";
-import Image from "./public/kirush.jpg";
+import Image from "next/image";
 
 export default function Hero() {
   const roles = ["Software Engineering Undergraduate", "Web Developer","UI/UX Designer"];
@@ -38,7 +38,11 @@ export default function Hero() {
       <div className="hero-content">
         <div className="hero-image">
           <div className="image-placeholder">
-          <img src="/kirush.jpg" alt="Kirushnabalan Vijayabalan" />
+          <Image
+  src="/portfolio/images/kirush.jpg"  // Add /portfolio prefix
+  alt="description"
+  priority  // Add priority for above-the-fold images
+/>
           </div>
         </div>
         <div className="hero-text">
