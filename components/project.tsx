@@ -1,4 +1,5 @@
-import { Code, Database, Layout, Figma, FileText } from "lucide-react"
+import { Code, Database, Layout, Figma, FileText, Github, Link } from "lucide-react";
+
 
 export default function Projects() {
   return (
@@ -6,6 +7,33 @@ export default function Projects() {
       <h2 className="section-title">Projects</h2>
       <div className="section-content">
         <div className="projects-grid">
+
+        <div className="project-card">
+            <div className="project-icon">
+              <FileText />
+            </div>
+            <h3>TrueLens</h3>
+            <p>
+              TrueLens is a university software development group project focused on analyzing aggregated news articles
+              to detect media biases and misinformation. I contribute to the backend.
+            </p>
+            <div className="project-tech">
+              <span>MongoDB</span>
+              <span>Node.js</span>
+              <span>Prisma</span>
+              <span>ReactJs</span>
+              <span>TypeScript</span>
+            </div>
+            <a
+              href="https://www.truelens.lk/landing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-link"
+            >
+             <Link/>Landing page
+            </a>
+          </div>
+
           <div className="project-card">
             <div className="project-icon">
               <Code />
@@ -20,6 +48,14 @@ export default function Projects() {
               <span>Tkinter</span>
               <span>OOP</span>
             </div>
+            <a
+              href="https://github.com/Kirushnabalan/PythonCourseWork.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-link"
+            >
+              <Github /> View on GitHub
+            </a>
           </div>
 
           <div className="project-card">
@@ -32,6 +68,14 @@ export default function Projects() {
               <span>Java</span>
               <span>OOP</span>
             </div>
+            <a
+              href="https://github.com/Kirushnabalan/SD2CW.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-link"
+            >
+              <Github /> View on GitHub
+            </a>
           </div>
 
           <div className="project-card">
@@ -48,6 +92,14 @@ export default function Projects() {
               <span>HTML</span>
               <span>CSS</span>
             </div>
+            <a
+              href="https://github.com/Kirushnabalan/FullWebCourseWork.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-link"
+            >
+              <Github /> View on GitHub
+            </a>
           </div>
 
           <div className="project-card">
@@ -65,6 +117,14 @@ export default function Projects() {
               <span>PostgreSQL</span>
               <span>Angular</span>
             </div>
+            <a
+              href="https://github.com/Kirushnabalan/JavaOopSpringBoot.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-link"
+            >
+              <Github /> View on GitHub
+            </a>
           </div>
 
           <div className="project-card">
@@ -76,25 +136,18 @@ export default function Projects() {
             <div className="project-tech">
               <span>Figma</span>
             </div>
+            <a
+              href="https://www.figma.com/design/33Vw2suKUoLQvhVHi1fiqY/ecoshift?node-id=0-1&p=f&t=qzUxg69WvV5dLq9z-0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-link"
+            >
+             <Figma /> View on Figma
+            </a>
           </div>
 
-          <div className="project-card">
-            <div className="project-icon">
-              <FileText />
-            </div>
-            <h3>TrueLens</h3>
-            <p>
-              TrueLens is a university software development group project focused on analyzing aggregated news articles
-              to detect media biases and misinformation. I contribute to the backend.
-            </p>
-            <div className="project-tech">
-              <span>MongoDB</span>
-              <span>Node.js</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
-

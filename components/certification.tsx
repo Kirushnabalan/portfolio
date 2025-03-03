@@ -45,6 +45,15 @@ export default function Certifications() {
               <p>LinkedIn</p>
             </div>
           </div>
+
+          <div className="certification-item">
+            <Award className="certification-icon" />
+            <div>
+              <h3>Python for beginers</h3>
+              <p>University of Moratuwa</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
