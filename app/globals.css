@@ -1014,3 +1014,26 @@ button:hover {
   height: 100%;
   object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
 }
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .section-content {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .contact-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 900px;
+  }
+
+  .contact-info {
+    align-items: flex-start;
+  }
+
+  .contact-form {
+    max-width: 400px;
+  }
+}
