@@ -1,7 +1,13 @@
-// next.config.js
-const nextConfig = {
-  output: 'export',  // Enable static export
-  trailingSlash: true, // Ensures proper URL format
-};
+import type { NextConfig } from 'next'
 
-module.exports = nextConfig;  // CommonJS export syntax
+const nextConfig: NextConfig = {
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+  basePath: '/portfolio',
+  assetPrefix: '/portfolio/',
+  trailingSlash: true,
+}
+
+export default nextConfig

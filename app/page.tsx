@@ -6,7 +6,6 @@ import Skills from "@/components/skills"
 import Certifications from "../components/certification"
 import Contact from "@/components/contact"
 import Navbar from "@/components/navbar"
-import "./globals.css"
 
 export default function Home() {
   return (
