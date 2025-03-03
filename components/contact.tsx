@@ -4,15 +4,15 @@ import React, { useState } from 'react';
 import Swal from 'sweetalert2';
 import { MapPin, Phone, Mail } from 'lucide-react';
 
-
 const Contact = () => {
   const [result, setResult] = useState("");
 
-  const onSubmit = async (event) => {
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => { // Explicitly typed event
     event.preventDefault();
     setResult("Sending....");
 
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.target as HTMLFormElement); // Cast event.target to HTMLFormElement
+
     formData.append("access_key", "82565c8d-edb8-49e5-832c-7049d6d7ed62");
 
     try {
@@ -25,7 +25,7 @@ const Contact = () => {
 
       if (data.success) {
         setResult("Form Submitted Successfully");
-        event.target.reset();
+        (event.target as HTMLFormElement).reset();
         // Show a SweetAlert2 popup
         Swal.fire({
           title: "Thank You!",

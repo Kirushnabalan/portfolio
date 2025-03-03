@@ -1,7 +1,7 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+// next.config.js
+const nextConfig = {
+  output: 'export',  // Enable static export
+  trailingSlash: true, // Ensures proper URL format
 };
 
-export default nextConfig;
+module.exports = nextConfig;  // CommonJS export syntax
