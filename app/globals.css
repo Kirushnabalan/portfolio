@@ -355,7 +355,8 @@ nav {
 }
 
 .image-placeholder:hover {
-  transform: scale(1.05) rotate(5deg);
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
 }
 
 .image-placeholder:hover::after {
@@ -404,6 +405,7 @@ nav {
   color: white;
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: bounce 1s;
 }
 
 .social-links a::before {
@@ -893,6 +895,38 @@ footer {
   }
 }
 
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  opacity: 0;
+  animation: slideInLeft 0.5s forwards;
+}
+
+.slide-in-right {
+  opacity: 0;
+  animation: slideInRight 0.5s forwards;
+}
+
 /* Contact Container */
 .contact-container {
   display: flex;
@@ -1046,5 +1080,17 @@ button:hover {
   .contact-button {
     font-size: 14px;
     padding: 8px;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
   }
 }
