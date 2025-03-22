@@ -18,4 +18,4 @@ This is a personal portfolio website built using Next.js and React. The website 
 - **CSS Modules / Styled Components** - Custom styling solution  
 - **Framer Motion** - Smooth animations and interactions  
 
-## 
+## visit https://kirushnabalan.github.io/portfolio/
