@@ -36,12 +36,20 @@ export default function Projects() {
             </div>
             <div className="project-links">
               <a
-                href="https://www.truelens.lk/landing"
+                href="https://www.truelens.lk"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="project-link"
               >
                 <ExternalLink size={16} /> Live Demo
+              </a>
+              <a
+                href="https://github.com/Curstantine/TrueLens"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <Github size={16} /> View Code
               </a>
             </div>
           </div>
