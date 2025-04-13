@@ -12,7 +12,7 @@ export default function Projects() {
           <div className="project-card">
             <div className="project-image-container">
               <Image 
-                src="/portfolio/images/projects/truelens.jpg" 
+                src="/portfolio/images/truelens.png" 
                 alt="TrueLens Project"
                 width={400}
                 height={250}
@@ -49,7 +49,7 @@ export default function Projects() {
           <div className="project-card">
             <div className="project-image-container">
               <Image 
-                src="/portfolio/images/projects/financial-tracker.jpg" 
+                src="/portfolio/images/py.png" 
                 alt="Financial Tracker"
                 width={400}
                 height={250}
@@ -84,7 +84,7 @@ export default function Projects() {
           <div className="project-card">
             <div className="project-image-container">
               <Image 
-                src="/portfolio/images/projects/student-management.jpg" 
+                src="/portfolio/images/StudentJava.webp"  
                 alt="Student Management System"
                 width={400}
                 height={250}
@@ -115,7 +115,7 @@ export default function Projects() {
           <div className="project-card">
             <div className="project-image-container">
               <Image 
-                src="/portfolio/images/projects/life-below-water.jpg" 
+                src="/portfolio/images/web.png" 
                 alt="Life Below Water Website"
                 width={400}
                 height={250}
@@ -150,7 +150,7 @@ export default function Projects() {
           <div className="project-card">
             <div className="project-image-container">
               <Image 
-                src="/portfolio/images/projects/event-booking.jpg" 
+                src="/portfolio/images/booking.webp" 
                 alt="Event Booking System"
                 width={400}
                 height={250}
@@ -186,7 +186,7 @@ export default function Projects() {
           <div className="project-card">
             <div className="project-image-container">
               <Image 
-                src="/portfolio/images/projects/ecoshift.jpg" 
+                src="/portfolio/images/eco.png" 
                 alt="EcoShift UI/UX Design"
                 width={400}
                 height={250}
