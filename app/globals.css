@@ -1094,3 +1094,245 @@ button:hover {
     transform: translateY(-5px);
   }
 }
+/* Add this to your globals.css file */
+
+/* Animation classes */
+.animate-section {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+
+.animate-section.visible {
+  opacity: 1;
+}
+
+.animate-fade-up {
+  transform: translateY(40px);
+}
+.animate-fade-up.visible {
+  transform: translateY(0);
+}
+
+.animate-fade-right {
+  transform: translateX(-40px);
+}
+.animate-fade-right.visible {
+  transform: translateX(0);
+}
+
+.animate-fade-left {
+  transform: translateX(40px);
+}
+.animate-fade-left.visible {
+  transform: translateX(0);
+}
+
+.animate-zoom-in {
+  transform: scale(0.9);
+}
+.animate-zoom-in.visible {
+  transform: scale(1);
+}
+
+.animate-bounce.visible {
+  animation: bounce-animation 1s ease;
+}
+
+@keyframes bounce-animation {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-20px);}
+  60% {transform: translateY(-10px);}
+}
+
+/* Scroll down button */
+.scroll-down-button {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  animation: bounce-soft 2s infinite;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--primary);
+}
+
+.scroll-down-button:hover {
+  opacity: 1;
+}
+
+.scroll-down-button span {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+@keyframes bounce-soft {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0) translateX(-50%);}
+  40% {transform: translateY(-10px) translateX(-50%);}
+  60% {transform: translateY(-5px) translateX(-50%);}
+}
+
+/* Project card enhancements */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease-out, box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.project-image-container {
+  height: 180px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .project-image-container {
+  background-color: #2a2a2a;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: var(--muted);
+  color: var(--foreground);
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Skill icons enhancements */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  background-color: var(--skill-tag);
+  color: var(--skill-tag-text);
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Certifications enhancements */
+.certifications-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.certification-item {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.certification-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary);
+}
+
+.certification-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.certification-icon {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.certification-content {
+  flex: 1;
+}
+
+.certification-content h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.certification-issuer {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: 0.5rem;
+}
+
+.certification-date {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .project-image-container {
+    height: 160px;
+  }
+  
+  .certifications-list {
+    grid-template-columns: 1fr;
+  }
+}

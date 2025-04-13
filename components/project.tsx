@@ -1,21 +1,31 @@
-import { Code, Database, Layout, Figma, FileText, Github, Link } from "lucide-react";
-
+// components/project.tsx
+import { Code, Database, Layout, Figma, FileText, Github, Link, ExternalLink } from "lucide-react";
+import Image from "next/image";
+import AnimatedSection from "./animated-section";
 
 export default function Projects() {
   return (
-    <section id="projects" className="section">
+    <AnimatedSection id="projects" animation="fade-up">
       <h2 className="section-title">Projects</h2>
       <div className="section-content">
         <div className="projects-grid">
-
-        <div className="project-card">
+          <div className="project-card">
+            <div className="project-image-container">
+              <Image 
+                src="/portfolio/images/projects/truelens.jpg" 
+                alt="TrueLens Project"
+                width={400}
+                height={250}
+                className="project-image"
+              />
+            </div>
             <div className="project-icon">
               <FileText />
             </div>
             <h3>TrueLens</h3>
             <p>
               TrueLens is a university software development group project focused on analyzing aggregated news articles
-              to detect media biases and misinformation. I contribute to the backend.
+              to detect media biases and misinformation. I contribute to the backend development and data processing.
             </p>
             <div className="project-tech">
               <span>MongoDB</span>
@@ -24,85 +34,129 @@ export default function Projects() {
               <span>ReactJs</span>
               <span>TypeScript</span>
             </div>
-            <a
-              href="https://www.truelens.lk/landing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="github-link"
-            >
-             <Link/>Landing page
-            </a>
+            <div className="project-links">
+              <a
+                href="https://www.truelens.lk/landing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <ExternalLink size={16} /> Live Demo
+              </a>
+            </div>
           </div>
 
           <div className="project-card">
+            <div className="project-image-container">
+              <Image 
+                src="/portfolio/images/projects/financial-tracker.jpg" 
+                alt="Financial Tracker"
+                width={400}
+                height={250}
+                className="project-image"
+              />
+            </div>
             <div className="project-icon">
               <Code />
             </div>
             <h3>Financial Tracker</h3>
             <p>
               Created a Python-based finance tracker with Tkinter, OOP, JSON handling, search, sorting, and thorough
-              testing.
+              testing. The app helps users manage personal finances with visual reports.
             </p>
             <div className="project-tech">
               <span>Python</span>
               <span>Tkinter</span>
               <span>OOP</span>
             </div>
-            <a
-              href="https://github.com/Kirushnabalan/PythonCourseWork.git"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="github-link"
-            >
-              <Github /> View on GitHub
-            </a>
+            <div className="project-links">
+              <a
+                href="https://github.com/Kirushnabalan/PythonCourseWork.git"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <Github size={16} /> View Code
+              </a>
+            </div>
           </div>
 
           <div className="project-card">
+            <div className="project-image-container">
+              <Image 
+                src="/portfolio/images/projects/student-management.jpg" 
+                alt="Student Management System"
+                width={400}
+                height={250}
+                className="project-image"
+              />
+            </div>
             <div className="project-icon">
               <Database />
             </div>
             <h3>Student Management System</h3>
-            <p>Built a Java Student Management System with OOP, arrays, sorting, and data handling.</p>
+            <p>Built a Java Student Management System with OOP, arrays, sorting, and data handling for efficient student record management.</p>
             <div className="project-tech">
               <span>Java</span>
               <span>OOP</span>
             </div>
-            <a
-              href="https://github.com/Kirushnabalan/SD2CW.git"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="github-link"
-            >
-              <Github /> View on GitHub
-            </a>
+            <div className="project-links">
+              <a
+                href="https://github.com/Kirushnabalan/SD2CW.git"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <Github size={16} /> View Code
+              </a>
+            </div>
           </div>
 
           <div className="project-card">
+            <div className="project-image-container">
+              <Image 
+                src="/portfolio/images/projects/life-below-water.jpg" 
+                alt="Life Below Water Website"
+                width={400}
+                height={250}
+                className="project-image"
+              />
+            </div>
             <div className="project-icon">
               <Layout />
             </div>
             <h3>Web Development Project</h3>
             <p>
               Developed a responsive "Life Below Water" website with interactive navigation, multimedia, and
-              user-friendly features.
+              user-friendly features that educate users about ocean conservation.
             </p>
             <div className="project-tech">
               <span>JavaScript</span>
               <span>HTML</span>
               <span>CSS</span>
             </div>
-            <a
-              href="https://github.com/Kirushnabalan/FullWebCourseWork.git"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="github-link"
-            >
-              <Github /> View on GitHub
-            </a>
+            <div className="project-links">
+              <a
+                href="https://github.com/Kirushnabalan/FullWebCourseWork.git"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <Github size={16} /> View Code
+              </a>
+            </div>
           </div>
 
           <div className="project-card">
+            <div className="project-image-container">
+              <Image 
+                src="/portfolio/images/projects/event-booking.jpg" 
+                alt="Event Booking System"
+                width={400}
+                height={250}
+                className="project-image"
+              />
+            </div>
             <div className="project-icon">
               <Database />
             </div>
@@ -117,37 +171,49 @@ export default function Projects() {
               <span>PostgreSQL</span>
               <span>Angular</span>
             </div>
-            <a
-              href="https://github.com/Kirushnabalan/JavaOopSpringBoot.git"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="github-link"
-            >
-              <Github /> View on GitHub
-            </a>
+            <div className="project-links">
+              <a
+                href="https://github.com/Kirushnabalan/JavaOopSpringBoot.git"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <Github size={16} /> View Code
+              </a>
+            </div>
           </div>
 
           <div className="project-card">
+            <div className="project-image-container">
+              <Image 
+                src="/portfolio/images/projects/ecoshift.jpg" 
+                alt="EcoShift UI/UX Design"
+                width={400}
+                height={250}
+                className="project-image"
+              />
+            </div>
             <div className="project-icon">
               <Figma />
             </div>
             <h3>UI/UX Design EcoShift</h3>
-            <p>Designed and prototyped a futuristic green plant app with an innovative and eco-friendly UI/UX.</p>
+            <p>Designed and prototyped a futuristic green plant app with an innovative and eco-friendly UI/UX for a design competition.</p>
             <div className="project-tech">
               <span>Figma</span>
             </div>
-            <a
-              href="https://www.figma.com/design/33Vw2suKUoLQvhVHi1fiqY/ecoshift?node-id=0-1&p=f&t=qzUxg69WvV5dLq9z-0"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="github-link"
-            >
-             <Figma /> View on Figma
-            </a>
+            <div className="project-links">
+              <a
+                href="https://www.figma.com/design/33Vw2suKUoLQvhVHi1fiqY/ecoshift?node-id=0-1&p=f&t=qzUxg69WvV5dLq9z-0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <Figma size={16} /> View Design
+              </a>
+            </div>
           </div>
-
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

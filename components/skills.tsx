@@ -1,28 +1,11 @@
+// components/skills.tsx
 "use client";
-import { useEffect } from "react";
+import AnimatedSection from "./animated-section";
+import { Code, Database, Layout, Figma, FileText, Github, Server, Braces, History, Languages, ChevronsUpDown } from "lucide-react";
+
 export default function Skills() {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("slide-in-left");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const elements = document.querySelectorAll(".slide-in-left-element");
-    elements.forEach((el) => observer.observe(el));
-
-    return () => {
-      elements.forEach((el) => observer.unobserve(el));
-    };
-  }, []);
   return (
-    <section id="skills" className="section">
+    <AnimatedSection id="skills" animation="fade-up">
       <h2 className="section-title">Skills</h2>
       <div className="section-content">
         <div className="skills-container">
@@ -32,52 +15,132 @@ export default function Skills() {
               <div className="skill-group">
                 <h4>Programming Languages</h4>
                 <div className="skill-tags">
-                  <span>Python</span>
-                  <span>Java</span>
-                  <span>JavaScript</span>
-                  <span>TypeScript</span>
+                  <div className="skill-tag">
+                    <div className="skill-icon">
+                      <Code size={18} />
+                    </div>
+                    <span>Python</span>
+                  </div>
+                  <div className="skill-tag">
+                    <div className="skill-icon">
+                      <ChevronsUpDown size={18} />
+                    </div>
+                    <span>Java</span>
+                  </div>
+                  <div className="skill-tag">
+                    <div className="skill-icon">
+                      <Braces size={18} />
+                    </div>
+                    <span>JavaScript</span>
+                  </div>
+                  <div className="skill-tag">
+                    <div className="skill-icon">
+                      <Languages size={18} />
+                    </div>
+                    <span>TypeScript</span>
+                  </div>
                 </div>
               </div>
 
               <div className="skill-group">
                 <h4>Frontend Technologies</h4>
                 <div className="skill-tags">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>React.js(Basic)</span>
+                  <div className="skill-tag">
+                    <div className="skill-icon">
+                      <Code size={18} />
+                    </div>
+                    <span>HTML</span>
+                  </div>
+                  <div className="skill-tag">
+                    <div className="skill-icon">
+                      <Layout size={18} />
+                    </div>
+                    <span>CSS</span>
+                  </div>
+                  <div className="skill-tag">
+                    <div className="skill-icon">
+                      <FileText size={18} />
+                    </div>
+                    <span>React.js</span>
+                  </div>
                 </div>
               </div>
 
               <div className="skill-group">
                 <h4>Backend Technologies</h4>
                 <div className="skill-tags">
-                  <span>Spring Boot</span>
-                  <span>Node.js(Basic)</span>
+                  <div className="skill-tag">
+                    <div className="skill-icon">
+                      <Server size={18} />
+                    </div>
+                    <span>Spring Boot</span>
+                  </div>
+                  <div className="skill-tag">
+                    <div className="skill-icon">
+                      <Server size={18} />
+                    </div>
+                    <span>Node.js</span>
+                  </div>
                 </div>
               </div>
 
               <div className="skill-group">
                 <h4>Databases</h4>
                 <div className="skill-tags">
-                  <span>PostgreSQL</span>
-                  <span>MySQL</span>
-                  <span>MongoDB</span>
+                  <div className="skill-tag">
+                    <div className="skill-icon">
+                      <Database size={18} />
+                    </div>
+                    <span>PostgreSQL</span>
+                  </div>
+                  <div className="skill-tag">
+                    <div className="skill-icon">
+                      <Database size={18} />
+                    </div>
+                    <span>MySQL</span>
+                  </div>
+                  <div className="skill-tag">
+                    <div className="skill-icon">
+                      <Database size={18} />
+                    </div>
+                    <span>MongoDB</span>
+                  </div>
                 </div>
               </div>
 
               <div className="skill-group">
                 <h4>UI/UX Design</h4>
                 <div className="skill-tags">
-                  <span>Figma</span>
-                  <span>Canva</span>
+                  <div className="skill-tag">
+                    <div className="skill-icon">
+                      <Figma size={18} />
+                    </div>
+                    <span>Figma</span>
+                  </div>
+                  <div className="skill-tag">
+                    <div className="skill-icon">
+                      <Layout size={18} />
+                    </div>
+                    <span>Canva</span>
+                  </div>
                 </div>
               </div>
 
               <div className="skill-group">
                 <h4>Version Control & Tools</h4>
                 <div className="skill-tags">
-                  <span>Git</span>
-                  <span>GitHub</span>
+                  <div className="skill-tag">
+                    <div className="skill-icon">
+                      <History size={18} />
+                    </div>
+                    <span>Git</span>
+                  </div>
+                  <div className="skill-tag">
+                    <div className="skill-icon">
+                      <Github size={18} />
+                    </div>
+                    <span>GitHub</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -87,16 +150,16 @@ export default function Skills() {
             <h3>Soft Skills</h3>
             <div className="skills-list">
               <div className="skill-tags">
-                <span>Time Management</span>
-                <span>Good Communication</span>
-                <span>Problem-solving</span>
-                <span>Self-Motivation</span>
-                <span>Collaborative</span>
+                <div className="skill-tag">Time Management</div>
+                <div className="skill-tag">Good Communication</div>
+                <div className="skill-tag">Problem-solving</div>
+                <div className="skill-tag">Self-Motivation</div>
+                <div className="skill-tag">Collaborative</div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   )
 }

@@ -1,11 +1,12 @@
+// components/hero.tsx
 "use client";
 
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Hero() {
-  const roles = ["Software Engineering Undergraduate", "Web Developer","UI/UX Designer"];
+  const roles = ["Software Engineering Undergraduate", "Web Developer", "UI/UX Designer"];
   const [index, setIndex] = useState(0);
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -33,16 +34,26 @@ export default function Hero() {
     return () => clearTimeout(typingTimer);
   }, [text, isDeleting, index]);
 
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="hero">
       <div className="hero-content">
         <div className="hero-image">
           <div className="image-placeholder">
-          <Image
-  src="/portfolio/images/kirush.jpg"  // Add /portfolio prefix
-  alt="description"
-  priority  // Add priority for above-the-fold images
-/>
+            <Image
+              src="/portfolio/images/kirush.jpg"
+              alt="Kirushnabalan Vijayabalan"
+              width={300}
+              height={300}
+              priority
+              className="rounded-2xl"
+            />
           </div>
         </div>
         <div className="hero-text">
@@ -61,9 +72,21 @@ export default function Hero() {
           </div>
           <div className="cta-buttons">
             <a href="#contact" className="cta-button animate-cta">Contact Me</a>
-            <a className="cta-button animate-cta" href="https://drive.google.com/file/d/1RXP66PGx5ECclQia0fGPY0HqlIPmuW4d/view?usp=sharing" download="cv.pdf">View CV</a>
+            <a 
+              className="cta-button animate-cta" 
+              href="https://drive.google.com/file/d/1RXP66PGx5ECclQia0fGPY0HqlIPmuW4d/view?usp=sharing" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View CV
+            </a>
           </div>
         </div>
+      </div>
+      
+      <div className="scroll-down-button" onClick={scrollToAbout}>
+        <span>Scroll Down</span>
+        <ChevronDown size={24} />
       </div>
     </section>
   );
