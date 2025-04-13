@@ -61,7 +61,7 @@ export default function Hero() {
           </div>
           <div className="cta-buttons">
             <a href="#contact" className="cta-button animate-cta">Contact Me</a>
-            <a className="cta-button animate-cta" href="https://drive.google.com/file/d/1e5FahwDT7nHrdWVQhkt1MtKuSKoKJlWS/view?usp=sharing" download="cv.pdf">View CV</a>
+            <a className="cta-button animate-cta" href="https://drive.google.com/file/d/1RXP66PGx5ECclQia0fGPY0HqlIPmuW4d/view?usp=sharing" download="cv.pdf">View CV</a>
           </div>
         </div>
       </div>
